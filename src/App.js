@@ -2,7 +2,7 @@
 
 import {connect } from 'react-redux';
 import RespondToForm from './components/RespondToForm';
-import { increment } from "./actions";
+import { increment,loadExampleForm } from "./actions";
 
 // connect takes two arguments:
 // - mapStateToProps
@@ -26,6 +26,7 @@ export const App = connect(
     function mapDispatchToProps(dispatch) {
         return {
             increment : () => dispatch(increment()),
+            loadExampleForm: ()=> dispatch(loadExampleForm())
         };
     }
 )(RespondToForm);
