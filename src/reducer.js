@@ -41,6 +41,8 @@ const exampleForm = new FormType({
 type Action = 
   | 'INCREMENT'
   | 'LOAD_EXAMPLE_FORM'
+  | "GET_FORM"
+  | "GOT_FORM";
 
 export default function reducer(form: FormType = init, action: {type: Action }) {
     switch(action.type) {
@@ -48,6 +50,8 @@ export default function reducer(form: FormType = init, action: {type: Action }) 
             return form.set('count', form.get('count') + 1 )
         case 'LOAD_EXAMPLE_FORM': 
             return exampleForm;
+        case 'GOT_FORM': 
+            return action.payload.form;
         default:
             return form
     }
