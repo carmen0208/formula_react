@@ -41,7 +41,6 @@ const exampleForm = new FormType({
 type Action = 
   | 'INCREMENT'
   | 'LOAD_EXAMPLE_FORM'
-  | "GET_FORM"
   | "GOT_FORM";
 
 export default function reducer(form: FormType = init, action: {type: Action }) {

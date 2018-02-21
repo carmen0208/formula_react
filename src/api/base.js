@@ -25,8 +25,8 @@ const defaultConfig = new ApiConfig({
 });
 
 function createConfig(resourcePath: string) {
-//   const resourceUrl = `${config.apiBaseUrl}/${resourcePath}/`;
- const resourceUrl = `http://localhost:3000/api/v1/${resourcePath}/`;
+  const resourceUrl = `${config.apiBaseUrl}/${resourcePath}/`;
+//  const resourceUrl = `http://localhost:3000/api/v1/${resourcePath}/`;
   console.log(resourceUrl);
   return defaultConfig.set("baseURL", resourceUrl).toJS();
 }
